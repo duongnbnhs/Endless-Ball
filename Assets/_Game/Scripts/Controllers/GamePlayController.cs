@@ -35,10 +35,11 @@ public class GamePlayController : Singleton<GamePlayController>
         playCanvas.SetActive(false);
         menuCanvas.SetActive(false);
         loseCanvas.SetActive(true);
-        foreach (GameObject obj in objList)
+        /*foreach (GameObject obj in objList)
         {
             Destroy(obj);
-        }
+        }*/
+        SimplePool.CollectAll();
         Destroy(lv);
     }
     public void SetScore(int score)

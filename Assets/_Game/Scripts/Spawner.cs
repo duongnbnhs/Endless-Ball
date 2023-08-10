@@ -27,13 +27,15 @@ public class Spawner : MonoBehaviour
                 rand = Random.Range(1, 11);
                 if (rand <= 4)
                 {
-                    var GO = Instantiate(obj1, transform.position, Quaternion.identity);
-                    GamePlayController.Instance.objList.Add(GO);
+                    //var GO = Instantiate(obj1, transform.position, Quaternion.identity);
+                    SimplePool.Spawn<MovingObject>(PoolType.obj1, transform.position, Quaternion.identity).OnInit();
+                    //GamePlayController.Instance.objList.Add(GO.gameObject);
                 }
                 else
                 {
-                    var GO = Instantiate(obj2, transform.position, Quaternion.identity);
-                    GamePlayController.Instance.objList.Add(GO);
+                    //var GO = Instantiate(obj2, transform.position, Quaternion.identity);
+                    SimplePool.Spawn<MovingObject>(PoolType.obj2, transform.position, Quaternion.identity).OnInit();
+                    //GamePlayController.Instance.objList.Add(GO.gameObject);
                 }
             }
             

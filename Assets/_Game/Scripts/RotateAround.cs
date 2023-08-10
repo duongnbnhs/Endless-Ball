@@ -12,7 +12,8 @@ public class RotateAround : MonoBehaviour
     protected Vector3 rotateAxis = new Vector3(0f, 0f, 1f);
     [SerializeField] GameObject hit1;
     [SerializeField] GameObject hit2;
-    
+    [SerializeField] AudioClip clip1;
+    [SerializeField] AudioClip clip2;
     void Update()
     {
         if (GameController.Instance.IsState(GameState.Play))
@@ -38,13 +39,17 @@ public class RotateAround : MonoBehaviour
         {
             GamePlayController.Instance.score += 10;
             GamePlayController.Instance.SetScore(GamePlayController.Instance.score);
-            Instantiate(hit1, transform.position, transform.rotation);
+            ParticlePool.Play(hit1.GetComponent<ParticleSystem>(), transform.position, transform.rotation);
+            SoundController.Instance.PlaySound(clip1);
+            //Instantiate(hit1, transform.position, transform.rotation);
         }
         if(collision.CompareTag("End Obj"))
         {
             GamePlayController.Instance.life--;
             GamePlayController.Instance.SetLife(GamePlayController.Instance.life);
-            Instantiate(hit2, transform.position, transform.rotation);
+            ParticlePool.Play(hit2.GetComponent<ParticleSystem>(), transform.position, transform.rotation);
+            SoundController.Instance.PlaySound(clip2);
+            //Instantiate(hit2, transform.position, transform.rotation);
 
         }
     }

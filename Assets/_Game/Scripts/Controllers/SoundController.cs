@@ -4,10 +4,27 @@ using UnityEngine;
 
 public class SoundController : Singleton<SoundController>
 {
-    public AudioSource soundSource;
-    
-    public void PlaySound(AudioClip sound)
+    [SerializeField] private AudioSource musicSource;
+    [SerializeField] private AudioSource effectSource;
+
+    public void PlaySound(AudioClip clip)
     {
-        soundSource.PlayOneShot(sound);
+        effectSource.PlayOneShot(clip);
+    }
+    /*public void PlayBGMusic(AudioClip clip)
+    {
+        musicSource.Play(clip);
+    }*/
+    public void ChangeMasterVolume(float volume)
+    {
+        AudioListener.volume = volume;
+    }
+    public void ToggleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+    }
+    public void ToggleEffect()
+    {
+        effectSource.mute = !effectSource.mute;
     }
 }
