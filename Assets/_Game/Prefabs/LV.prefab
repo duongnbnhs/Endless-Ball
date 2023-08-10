@@ -102,6 +102,8 @@ MonoBehaviour:
   rotateSpeed: 100
   hit1: {fileID: 8530068098381248760, guid: 34a7d812942d617489de641e5893a009, type: 3}
   hit2: {fileID: 8807819220288809752, guid: 7e76dab310eeb374cb46afe230950031, type: 3}
+  clip1: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+  clip2: {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
 --- !u!58 &648626420839171932
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -319,6 +321,8 @@ MonoBehaviour:
   rotateSpeed: 100
   hit1: {fileID: 8530068098381248760, guid: 34a7d812942d617489de641e5893a009, type: 3}
   hit2: {fileID: 8807819220288809752, guid: 7e76dab310eeb374cb46afe230950031, type: 3}
+  clip1: {fileID: 8300000, guid: 56703418e3aed4c47a5f6622816b8e41, type: 3}
+  clip2: {fileID: 8300000, guid: fd25a15f9797641458336cccfb445343, type: 3}
 --- !u!58 &648626421895968812
 CircleCollider2D:
   m_ObjectHideFlags: 0

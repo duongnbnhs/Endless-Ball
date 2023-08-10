@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2936e8b54890f9344af1f23f90f6e3f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  poolType: 5
   rb: {fileID: 3846568996428453201}
   speed: 2
 --- !u!50 &3846568996428453201
